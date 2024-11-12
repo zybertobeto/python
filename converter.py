@@ -24,27 +24,27 @@ while True:
             match values['-OPTION-']:
                 case 'Celsius to Fahrenheit':
                     output = round(float(input_value) * 9 / 5 + 32, 2)
-                    output_string = f'{input_value} degree Celsius is equivalent to {output} degrees Fahrenheit'
+                    output_string = f'{input_value} degrees Celsius is equivalent to {output} degrees Fahrenheit'
 
                 case 'Fahrenheit to Celsius':
-                    output = round(float(input_value) * 9 / 5 + 32, 2)
-                    output_string = f'{input_value} degree Celsius is equivalent to {output} degrees Fahrenheit'
+                    output = round((float(input_value) - 32) * 5 / 9, 2)
+                    output_string = f'{input_value} degrees Fahrenheit is equivalent to {output} degrees Celsius'
 
                 case 'Celsius to Kelvin':
-                    output = round(float(input_value) * 9 / 5 + 32, 2)
-                    output_string = f'{input_value} degree Celsius is equivalent to {output} degrees Fahrenheit'
+                    output = round(float(input_value) + 273.15, 2)
+                    output_string = f'{input_value} degrees Celsius is equivalent to {output} degrees Kelvin'
 
                 case 'Kelvin to Fahrenheit':
-                    output = round(float(input_value) * 9 / 5 + 32, 2)
-                    output_string = f'{input_value} degree Celsius is equivalent to {output} degrees Fahrenheit'
+                    output = round((float(input_value) - 273.15) * 9 / 5 + 32, 2)
+                    output_string = f'{input_value} degrees Kelvin is equivalent to {output} degrees Fahrenheit'
 
                 case 'Fahrenheit to Kelvin':
-                    output = round(float(input_value) * 9 / 5 + 32, 2)
-                    output_string = f'{input_value} degree Celsius is equivalent to {output} degrees Fahrenheit'
+                    output = round((float(input_value) - 32) * 5 / 9 + 273.15, 2)
+                    output_string = f'{input_value} degrees Fahrenheit is equivalent to {output} degrees Kelvin'
 
                 case 'Kelvin to Celsius':
-                    output = round(float(input_value) * 9 / 5 + 32, 2)
-                    output_string = f'{input_value} degree Celsius is equivalent to {output} degrees Fahrenheit'
+                    output = round(float(input_value) - 273.15, 2)
+                    output_string = f'{input_value} degrees Kelvin is equivalent to {output} degrees Celsius'
 
             window['-OUTPUT-'].update(output_string)
 
