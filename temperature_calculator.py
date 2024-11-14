@@ -15,7 +15,7 @@ while selectedOption != 0:
     if selectedOption == 1:
         userEntry = input("Enter temperature Celsius you want to convert :")
         calcFigure = int(userEntry)
-        celsiusToFahrenheit = (calcFigure * 9) /5 + 32
+        celsiusToFahrenheit = (calcFigure * 9) / 5 + 32
         print(f"{userEntry} degrees Celsius is equal to {celsiusToFahrenheit} degrees Fahrenheit.")
         break
 
@@ -59,11 +59,3 @@ while selectedOption != 0:
         break
 
 print("Thanks for using the program.")
-
-
-
-
-
-
-
-
