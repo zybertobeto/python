@@ -26,15 +26,29 @@ cr = [[7, 8, 9, 10, 11, 12],
       [103, 104, 105, 106, 107, 108],
       [115, 116, 117, 118, 119, 120]]
 
+# print(dr + cr)
+res = []
+# for a in dr:
+#     for b in cr:
+#         res.append(a+b)
+longDR = len(dr)
+for index in range(0, longDR):
+    res.append(dr[index]+cr[index])
+print(res)
+
+dr_cr = []
 for (a, b) in itertools.zip_longest(dr, cr):
-    dr_cr = (a, b)
+    dr_cr = (a + b)
 
     print(dr_cr)
 
 wb = openpyxl.load_workbook('Tests.xlsx')
 ws = wb.active
 
-for x in dr_cr:
-    ws.append(x)
+# for x in res:
+#     ws.append(x)
 
-wb.save('Tests.xlsx')
+for y in dr_cr:
+    ws.append(y)
+
+ws.save('Tests.xlsx')
